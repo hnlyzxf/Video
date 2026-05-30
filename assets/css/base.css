@@ -1,0 +1,64 @@
+/* Base Styles and Reset */
+html {
+    webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-family: sans-serif;
+    background-color: var(--_theme---background);
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-family-primary);
+    text-transform: var(--_text-style---text-transform);
+    color: var(--_theme---text);
+    background-color: var(--_theme---background);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: unset;
+    padding: unset;
+    text-align: inherit;
+    border: none;
+    font-family: inherit;
+}
+
+button:not(:disabled) {
+    cursor: pointer;
+}
+
+a:not([class]) {
+    text-decoration: underline;
+    color: inherit;
+}
+
+/* Skip link for accessibility */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background: #000;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    left: 0.5rem;
+    top: 0.5rem;
+    width: auto;
+    height: auto;
+    overflow: visible;
+}

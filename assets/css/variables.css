@@ -1,0 +1,46 @@
+/* CSS Variables and Root Styles */
+:root {
+    --site--width: 1200px;
+    --site--margin: 2rem;
+    --site--gutter: 2rem;
+    --site--column-count: 12;
+    --_theme---background: #FAF9F5;
+    --_theme---text: #000000;
+    --_text-style---text-transform: none;
+    --site--max-width: min(var(--site--width), 100vw);
+    --container--main: calc(var(--site--max-width) - var(--site--margin) * 2);
+    --site--gutter-total: calc(var(--site--gutter) * (var(--site--column-count) - 1));
+    --column-width--1: calc((var(--container--main) - var(--site--gutter-total)) / var(--site--column-count));
+    --column-width--plus-gutter: calc(var(--column-width--1) + var(--site--gutter));
+    --grid-main: repeat(var(--site--column-count), minmax(0, 1fr));
+    --nav--height: 4.375rem;
+    --nav--menu-open-duration: 400ms;
+    --nav--menu-close-duration: 400ms;
+    --nav--dropdown-duration: 200ms;
+    
+    /* Typography */
+    --font-family-primary: "Fira Code", monospace;
+    --font-family-secondary: "Inter", sans-serif;
+    
+    /* Simplified Colors - only background and text */
+    --color-border: rgba(0, 0, 0, 0.1);
+    --color-hover: rgba(0, 0, 0, 0.05);
+    --color-input-bg: #ffffff;
+    --color-button-bg: #000000;
+    --color-button-text: #ffffff;
+    --color-muted: #666666;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark theme variables */
+[data-theme="dark"] {
+    --_theme---background: #0a0a0a;
+    --_theme---text: #ffffff;
+    --color-border: rgba(255, 255, 255, 0.1);
+    --color-hover: rgba(255, 255, 255, 0.05);
+    --color-input-bg: #2a2a2a;
+    --color-button-bg: #ffffff;
+    --color-button-text: #000000;
+    --color-muted: #999999;
+    --color-shadow: rgba(0, 0, 0, 0.3);
+}
