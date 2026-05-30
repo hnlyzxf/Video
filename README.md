@@ -184,6 +184,10 @@ assets/js/config.js
 
 如部署在子目录，项目会通过 `core/bootstrap.php` 自动计算应用基础路径；如果反向代理或 HTTPS 终止在上游，请正确传递 `X-Forwarded-Proto`，避免站内回调协议不一致。
 
+## 许可证
+
+本项目基于 [MIT License](LICENSE) 开源。
+
 ## 验证清单
 
 部署或修改后建议检查：
